@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src"
+    "lint": "eslint src --max-warnings=0"
   },
   "dependencies": {
     "eslint-plugin-react-hooks": "^4.0.8",
@@ -34,6 +34,6 @@
     }
   },
   "lint-staged": {
-    "src/**/*": "eslint --cache --fix"
+    "src/**/*": "npm run lint --fix"
   }
 }
