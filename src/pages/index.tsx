@@ -1,6 +1,5 @@
 import Head from 'next/head'
 
-const title = 'asdasd'
 export default function Home() {
   return (
     <div className="container">
