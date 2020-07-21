@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 
-import Main from '../..'
+import Main from '../'
 
 describe('Main Component', () => {
   it('renders the haader', () => {
@@ -11,5 +11,11 @@ describe('Main Component', () => {
     ).toBeInTheDocument()
 
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should render the colors correctly', () => {
+    const { container } = render(<Main />)
+
+    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
   })
 })
